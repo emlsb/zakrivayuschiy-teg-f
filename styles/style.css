@@ -15,6 +15,9 @@
 */
 
 .page {
+  font-family: var(--mainFont), 'Courier New', Courier, monospace;
+  background-color: var(--backgroundColor);
+  color: var(--accentColor);
   min-inline-size: 320px;
   min-block-size: 100dvb;
 }
