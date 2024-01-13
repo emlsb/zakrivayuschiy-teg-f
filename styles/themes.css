@@ -10,6 +10,7 @@
     --accentFont: "PressStart2P";
     --backgroundColor: #FFFFFF;
     --accentColor: #000000;
+    --backgroundImage: url("../images/backgroundLight.png");
 }
 
 :root.theme-dark {
@@ -17,4 +18,5 @@
     --accentFont: "PressStart2P";
     --backgroundColor: #000000;
     --accentColor:  #00CC14;
+    --backgroundImage: url("../images/backgroundDark.png");
 }

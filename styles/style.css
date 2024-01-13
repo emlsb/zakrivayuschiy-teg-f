@@ -20,4 +20,6 @@
   color: var(--accentColor);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: var(--backgroundImage)
 }
+
