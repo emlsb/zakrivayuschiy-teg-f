@@ -1,8 +1,9 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --mainFont: "Inter";
-    --accentFont: "PressStart2P";
-    --backgroundColor: #FFFFFF;
-    --accentColor: #000000;
-    --backgroundImage: url("../images/backgroundLight.png");
+    --main-font: "Inter";
+    --accent-font: "PressStart2P";
+    --background-color: #FFFFFF;
+    --accent-color: #000000;
+    --background-image: url("../images/backgroundLight.png");
+    --main-font-size: 18px;
 }

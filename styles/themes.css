@@ -6,17 +6,17 @@
 */
 
 :root.theme-light{
-    --mainFont: "Inter";
-    --accentFont: "PressStart2P";
-    --backgroundColor: #FFFFFF;
-    --accentColor: #000000;
-    --backgroundImage: url("../images/backgroundLight.png");
+    --main-font: "Inter";
+    --accent-font: "PressStart2P";
+    --background-color: #FFFFFF;
+    --accent-color: #000000;
+    --background-image: url("../images/backgroundLight.png");
 }
 
 :root.theme-dark {
-    --mainFont: "Inter";
-    --accentFont: "PressStart2P";
-    --backgroundColor: #000000;
-    --accentColor:  #00CC14;
-    --backgroundImage: url("../images/backgroundDark.png");
+    --main-font: "Inter";
+    --accent-font: "PressStart2P";
+    --background-color: #000000;
+    --accent-color:  #00CC14;
+    --background-image: url("../images/backgroundDark.png");
 }
