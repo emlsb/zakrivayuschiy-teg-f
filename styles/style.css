@@ -46,12 +46,12 @@
   text-transform: uppercase;
   gap: 20px;
   padding: 120px 14px 0px 14px;
+  font-weight: 400;
 }
 
 .logo {
   text-decoration: none;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  font-style: normal;
 }
 
 .title {
@@ -136,8 +136,9 @@
 }
 
 .icon_btn {
-  width: 27px;
-  height: 24px;
+  background-color: transparent;
+  padding: 0;
+  border: 2px solid transparent;
 }
 
 .like_btn {
