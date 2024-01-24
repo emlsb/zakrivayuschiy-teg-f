@@ -21,10 +21,21 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   background-image: var(--background-image);
+  background-size: cover;
   background-attachment: fixed;
   font-size: var(--main-font-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Логотип и меню */
 .header {
   display: flex;
   flex-direction: column;
@@ -36,6 +47,7 @@
   margin-top: 102px;
   margin-left: 2px;
   margin-right: 2px;
+  inline-size: 100%;
 }
 
 .header_logo {
@@ -66,7 +78,7 @@
 }
 
 .theme-menu__item {
-  font-size: 14px;
+  font-size: var(--accent-font-size);
 }
 
 .theme-menu__button {
@@ -76,12 +88,33 @@
   text-transform: uppercase;
 }
 
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  inline-size: 100%;
+  block-size: 2px;
+  margin-block-start: 1px;
+  background-color: var(--accent-color, #000);
+  opacity: 0.6;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
 .theme-menu__button:disabled {
   opacity: 0.6;
   pointer-events: none;
 }
 
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  inset-inline-start: -1.3rem;
+  inset-block-start: 0;
+}
 
+/* Логотип и меню */
+
+/* Карточки */
 .main {
   padding-top: 100px;
   display: flex;
@@ -91,10 +124,10 @@
 }
 
 .cards_section {
+  inline-size: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 50px;
 }
 
@@ -109,11 +142,42 @@
   border: 2px solid var(--accent-color)
 }
 
-.image_card {
-  width: 371px;
-  height: 371px;
-  object-fit: cover;
+.image_container {
   border: 2px solid var(--accent-color);
+  position: relative;
+}
+
+.image_card {
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.watermark {
+  position: absolute;
+  z-index: 1;
+  inset-inline-end: var(--watermark-inset-inline-end);
+  inset-block-start: 25px;
+  font-family: var(--accent-font);
+  font-size: var(--accent-font-size);
+  text-align: right;
+  mix-blend-mode: hard-light;
+  color: var(--watermark-text-color);
+  text-transform: uppercase;
+  text-shadow:
+    -1px 0 var(--watermark-outline-color),
+    0 1px var(--watermark-outline-color),
+    1px 0 var(--watermark-outline-color),
+    0 -1px var(--watermark-outline-color);
+}
+
+@supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+
+  .watermark {
+    -webkit-text-stroke: 1px var(--watermark-outline-color);
+    text-shadow: none;
+  }
 }
 
 .text_card {
@@ -124,7 +188,9 @@
   padding: 25px;
   font-weight: 400;
 }
+/* Карточки */
 
+/* Кнопки карточек */
 .buttons_card {
   display: flex;
   flex-direction: row;
@@ -146,7 +212,8 @@
   background-color: transparent;
   border: 2px solid var(--accent-color);
   font-family: PressStart2P;
-  font-size: 14px;
+  font-size: var(--accent-font-size);
   font-style: normal;
   font-weight: 400
 }
+/* Кнопки карточек */
