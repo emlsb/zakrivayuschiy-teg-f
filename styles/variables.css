@@ -12,4 +12,17 @@
   --watermark-outline-color: rgba(255 255 255 / 0.5);
   --watermark-text-color: rgba(0 0 0 / 0.5);
   --watermark-inset-inline-end: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
+  --content-inline-size: 100%
 }
+
+
+@media (min-width: 768px) {
+
+    :root {
+      --content-inline-size: clamp(43.75rem, 52.8571rem + -10.119vw, 100%);
+    }
+  
+    .section-save__button {
+      --section-save-button-direction: row;
+    }
+  }
