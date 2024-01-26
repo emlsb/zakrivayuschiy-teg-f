@@ -5,10 +5,12 @@
     src: 
         url(./Inter-Variable.woff2) format('woff2 supports variations'),
         url(./Inter-Variable.woff2) format('woff2-variations');
+    font-weight: 465 785;
 }
 
 @font-face {
     font-display: swap;
     font-family: 'PressStart2P';
     src: url(./PressStart2P-Regular.woff) format('woff');
+    font-weight: 400;
 }
