@@ -58,6 +58,7 @@
   cursor: pointer;
 }
 
+
 .title {
   font-size: 14px;
 }
@@ -395,6 +396,7 @@
   font-size: var(--accent-font-size);
   line-height: 150%;
   text-transform: uppercase;
+  padding-right: 23px;
 }
 
 .dialog__button {
