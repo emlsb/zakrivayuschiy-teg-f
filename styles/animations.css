@@ -12,3 +12,231 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes menu-pointer {
+
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-4px);
+    }
+  }
+  
+  @keyframes icon-scale {
+  
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(1.5);
+    }
+  }
+  
+  @keyframes icon-sparks {
+  
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .contour {
+    transition: fill 0.1s linear;
+  }
+  
+  .main-body {
+    transition: fill 0.3s linear;
+  }
+  
+  .core {
+    transition: fill 0.3s 0.03s linear;
+  }
+  
+  .like-icon:hover .core {
+    transition: fill 0.3s linear;
+  }
+  
+  .like-icon:hover .main-body {
+    transition: fill 0.3s 0.05s linear;
+  }
+  
+  .like-icon:active .core {
+    transition: fill 0.3s linear;
+  }
+  
+  .like-icon:active .main-body {
+    transition: fill 0.3s 0.05s linear;
+  }
+  
+  .like-icon.is-liked .core {
+    transition: fill 0.3s linear;
+  }
+  
+  .like-icon.is-liked .main-body {
+    transition: fill 0.3s 0.05s linear;
+  }
+  
+  .like-icon.is-liked .contour {
+    transition: fill 0.3s 0.06s linear;
+  }
+  
+  .like-icon.is-liked .heart {
+    transform-origin: center;
+    animation: icon-scale 0.3s 0.1s ease-in 1 alternate;
+  }
+  
+  .like-icon.is-liked .sparks {
+    animation: icon-sparks 0.3s 0.3s ease-in 1 alternate;
+  }
+  
+  .button_content::after{
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .card__icon-button:focus-visible {
+    border: 2px solid var(--accent-color);
+  }
+  
+  .button_content:focus {
+    box-shadow: 2px 2px 0 0 var(--accent-color);
+  }
+  
+  .button_content:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .theme-menu__button {
+    transition: opacity 0.3s ease;
+  }
+  
+  .theme-menu__button::after {
+    transition: transform 0.3s ease;
+  }
+  
+  .theme-menu__button:disabled::before {
+    animation: menu-pointer 0.5s ease-in-out infinite alternate;
+  }
+  
+  .icon_btn {
+    transition: border 0.3s ease;
+  }
+  
+  .button_content {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .filter-bright,
+  .filter-dark,
+  .filter-hue,
+  .filter-saturate,
+  .filter-sepia,
+  .filter-contrast,
+  .filter-grayscale,
+  .filter-colorful {
+    transition: filter 0.5s ease;
+  }
+  
+  .filter-bright:hover,
+  .filter-dark:hover,
+  .filter-hue:hover,
+  .filter-saturate:hover,
+  .filter-sepia:hover,
+  .filter-contrast:hover,
+  .filter-grayscale:hover,
+  .filter-colorful:hover {
+    filter: none;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+  
+    .contour {
+      transition: fill 1.1s linear;
+    }
+    
+    .main-body {
+      transition: fill 1.3s linear;
+    }
+    
+    .core {
+      transition: fill 1.3s 1.03s linear;
+    }
+    
+    .like-icon:hover .core {
+      transition: fill 1.3s linear;
+    }
+    
+    .like-icon:hover .main-body {
+      transition: fill 1.3s 1.05s linear;
+    }
+    
+    .like-icon:active .core {
+      transition: fill 1.3s linear;
+    }
+    
+    .like-icon:active .main-body {
+      transition: fill 1.3s 1.05s linear;
+    }
+    
+    .like-icon.is-liked .core {
+      transition: fill 1.3s linear;
+    }
+    
+    .like-icon.is-liked .main-body {
+      transition: fill 1.3s 1.05s linear;
+    }
+    
+    .like-icon.is-liked .contour {
+      transition: fill 1.3s 1.06s linear;
+    }
+    
+    .like-icon.is-liked .heart {
+      animation: icon-scale 1.3s 1.1s ease-in 1 alternate;
+    }
+    
+    .like-icon.is-liked .sparks {
+      animation: icon-sparks 1.3s 1.3s ease-in 1 alternate;
+    }
+    
+    .button_content::after{
+      transition: transform 1.5s ease-in-out;
+    }
+    
+    .theme-menu__button {
+      transition: opacity 1.3s ease;
+    }
+    
+    .theme-menu__button::after {
+      transition: transform 1.3s ease;
+    }
+    
+    .theme-menu__button:disabled::before {
+      animation: menu-pointer 1.5s ease-in-out infinite alternate;
+    }
+    
+    .card__icon-button {
+      transition: border 1.3s ease;
+    }
+    
+    .button_content {
+      transition: box-shadow 1.3s ease;
+    }
+    
+    .filter-bright,
+    .filter-dark,
+    .filter-hue,
+    .filter-saturate,
+    .filter-sepia,
+    .filter-contrast,
+    .filter-grayscale,
+    .filter-colorful {
+      transition: filter 1.3s ease;
+    }
+  }

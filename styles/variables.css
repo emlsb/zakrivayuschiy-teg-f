@@ -2,8 +2,8 @@
 :root {
   --main-font: "Inter";
   --accent-font: "PressStart2P";
-  --background-color: #ffffff;
-  --accent-color: #000000;
+  --background-color: #fff;
+  --accent-color: #000;
   --background-image: repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
                       repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
                       linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
@@ -12,14 +12,17 @@
   --watermark-outline-color: rgba(255 255 255 / 0.5);
   --watermark-text-color: rgba(0 0 0 / 0.5);
   --watermark-inset-inline-end: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
-  --content-inline-size: 100%
+  --content-inline-size: 371px;
+  --icon-contour-color: #000;
+  --icon-color: #f00;
+  --button-text-color: #fff;
 }
 
 
 @media (min-width: 768px) {
 
     :root {
-      --content-inline-size: clamp(43.75rem, 52.8571rem + -10.119vw, 100%);
+      --content-inline-size: 696px;
     }
   
     .section-save__button {

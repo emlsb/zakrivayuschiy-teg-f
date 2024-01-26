@@ -13,6 +13,8 @@
                         linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
     --watermark-outline-color: rgba(255 255 255 / 0.5);
     --watermark-text-color: rgba(0 0 0 / 0.5);
+    --button-text-color: #fff;
+    --icon-contour-color: #000;
 }
 
 :root.theme-dark {
@@ -23,4 +25,6 @@
                         linear-gradient(#007f0c, #004306);
     --watermark-outline-color: rgba(0 0 0 / 0.5);
     --watermark-text-color: rgba(0 204 20 / 0.5);
+    --button-text-color: #00CC14;
+    --icon-contour-color: #00cc14;
 }
