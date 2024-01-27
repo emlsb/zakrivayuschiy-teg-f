@@ -84,6 +84,7 @@
   cursor: pointer;
   text-transform: uppercase;
   position: relative;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button::after {
@@ -96,6 +97,7 @@
   opacity: 0.6;
   transform-origin: left;
   transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .theme-menu__button:disabled {
@@ -108,6 +110,7 @@
   position: absolute;
   inset-inline-start: -0.5rem;
   inset-block-start: 0;
+  animation: menu-pointer 0.5s ease-in-out infinite alternate;
 }
 
 .theme-menu__button:hover {
@@ -222,6 +225,7 @@
   font-size: var(--accent-font-size);
   line-height: 90%;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .button_content::after {
@@ -232,17 +236,9 @@
   inline-size: 100%;
   block-size: 100%;
   background-color: var(--accent-color);
-}
-
-/* Состояния кнопок карточек и кнопок тем */
-.button_content::after{
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease-in-out;
-}
-
-.card__icon-button:focus-visible {
-  border: 2px solid var(--accent-color);
 }
 
 .button_content:focus {
@@ -253,33 +249,16 @@
   transform: scaleX(1);
 }
 
-.theme-menu__button {
-  transition: opacity 0.3s ease;
-}
-
-.theme-menu__button::after {
-  transition: transform 0.3s ease;
-}
-
-.theme-menu__button:disabled::before {
-  animation: menu-pointer 0.5s ease-in-out infinite alternate;
-}
-
-.icon_btn {
-  transition: border 0.3s ease;
-}
-
-.button_content {
-  transition: box-shadow 0.3s ease;
-}
-/*  */
-
-
 .card__icon-button {
   padding: 0;
   background-color: transparent;
   border: 2px solid transparent;
   height: 38px;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
 }
 
 /* Кнопка сердца */
