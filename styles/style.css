@@ -188,6 +188,7 @@
 
   .watermark {
     -webkit-text-stroke: 1px var(--watermark-outline-color);
+    text-stroke: 1px var(--watermark-outline-color);
     text-shadow: none;
   }
 }
@@ -229,6 +230,47 @@
   block-size: 100%;
   background-color: var(--accent-color);
 }
+
+/* Состояния кнопок карточек и кнопок тем */
+.button_content::after{
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
+}
+
+.button_content:focus {
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+}
+
+.button_content:hover::after {
+  transform: scaleX(1);
+}
+
+.theme-menu__button {
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button::after {
+  transition: transform 0.3s ease;
+}
+
+.theme-menu__button:disabled::before {
+  animation: menu-pointer 0.5s ease-in-out infinite alternate;
+}
+
+.icon_btn {
+  transition: border 0.3s ease;
+}
+
+.button_content {
+  transition: box-shadow 0.3s ease;
+}
+/*  */
+
 
 .card__icon-button {
   padding-top: 5px;
